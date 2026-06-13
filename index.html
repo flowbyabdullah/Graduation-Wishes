@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation Congratulations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.container{
+width:100%;
+height:100vh;
+position:relative;
+overflow:hidden;
+}
+
+.screen{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+opacity:0;
+pointer-events:none;
+transform:translateX(100%);
+transition:1s;
+text-align:center;
+}
+
+.screen.active{
+opacity:1;
+pointer-events:auto;
+transform:translateX(0);
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:30px 20px;
+border-radius:25px;
+max-width:750px;
+width:90%;
+box-shadow:0 0 30px rgba(255,255,255,.15);
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-10px);
+}
+}
+
+h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+h2{
+font-size:2rem;
+margin-bottom:15px;
+color:#facc15;
+}
+
+p{
+font-size:1.1rem;
+line-height:1.8;
+}
+
+img{
+width:200px;
+height:200px;
+object-fit: contain;
+border-radius:20px;
+margin:10px 0;
+border:2px solid white;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#facc15;
+font-weight:700;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.cap{
+position:absolute;
+font-size:35px;
+animation:fall linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+.confetti{
+position:absolute;
+width:10px;
+height:10px;
+animation:confetti linear infinite;
+}
+
+@keyframes confetti{
+0%{
+transform:translateY(-100px) rotate(0);
+}
+100%{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+.final-title{
+font-size:4rem;
+color:#facc15;
+margin-bottom:20px;
+}
+
+.heart{
+font-size:70px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.2);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="caps"></div>
+<div id="confetti"></div>
+
+<!-- Screen 1 -->
+<div class="screen active">
+<div class="card">
+<h1>Graduation My Love 🎓♥️</h1>
+<h2>Effa Naeem Ullah</h2>
+<p>Congratulations on your graduation! This is a very special moment in your life, and you 
+    should be extremely proud of what you have achieved. Your hard work, dedication, and 
+    commitment have brought you to this important milestone. I wish you continued 
+    success in everything you choose to do in the future, and may every step ahead 
+    lead you closer to your dreams and goals..</p>
+<button onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- Screen 2 -->
+<div class="screen">
+<div class="card">
+<h2>Graduation Memory 📸</h2>
+
+<img src="/assets/graduation .jpeg" alt="Graduate">
+<img src="/assets/graduation two.jpeg" alt="Graduate">
+<img src="/assets/graduation four.jpeg" alt="Graduate">
+
+
+<button onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- Screen 3 -->
+<div class="screen">
+<div class="card">
+<h2>Achievement Unlocked 🏆</h2>
+
+<p>
+Assignments, exams, and last-minute revisions—yet you
+ managed everything like a pro. You didn’t just complete tasks; you conquered them.
+ From where you started to where you are now, the progress is real. You didn’t just 
+ pass—you grew into a better version of yourself.<br> <br>
+ <b>Congratulations on leveling up your academic journey!</b>
+</p>
+
+<button onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- Screen 4 -->
+<div class="screen">
+<div class="card">
+<h2>Future Wishes 🌟</h2>
+
+<p>
+As you move forward in life, I sincerely wish you a future filled with success, peace,
+ and prosperity. May you always find the strength to overcome challenges and the wisdom 
+ to make the right decisions. Your hard work has already brought you this far, and I 
+ believe your futureholds even greater achievements, happiness, and unforgettable moments of success.
+<br><br> <b>I wish you a future full of opportunities where your dreams turn into reality and your efforts are rewarded with great success</b>
+</p>
+
+<button onclick="next()">Next</button>
+</div>
+</div>
+
+<!-- Screen 5 -->
+<div class="screen">
+<div class="card">
+
+<div class="heart">❤️</div>
+
+<h2>Special Message</h2>
+
+
+<p>
+Can we make our Nikkah happen soon and begin the life we’ve been dreaming of together?
+</p>
+
+<button onclick="next()">Yes In Sha ALLAH</button>
+
+</div>
+</div>
+
+<!-- Screen 6 -->
+<div class="screen">
+<div class="card">
+
+<h1 class="final-title">
+ Congratulations 🎉
+</h1>
+
+
+<p>
+May Allah always keep you happy, successful, and surrounded by barakah. Ameen. 
+InshaAllah, I pray from the heart that we meet soon and Allah allows us to get married
+ so we can start our life together in the most beautiful and blessed way.
+</p>
+
+<br>
+
+<p>
+IN SHA ALLAH We'll Met Soon
+</p>
+
+<div class="heart">💖</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+const screens=document.querySelectorAll(".screen");
+let current=0;
+
+function next(){
+
+screens[current].classList.remove("active");
+
+current++;
+
+if(current>=screens.length){
+current=screens.length-1;
+}
+
+screens[current].classList.add("active");
+}
+
+const caps=document.getElementById("caps");
+
+for(let i=0;i<25;i++){
+
+let cap=document.createElement("div");
+
+cap.className="cap";
+cap.innerHTML="🎓";
+
+cap.style.left=Math.random()*100+"%";
+cap.style.animationDuration=(5+Math.random()*8)+"s";
+cap.style.animationDelay=Math.random()*5+"s";
+
+caps.appendChild(cap);
+}
+
+const confetti=document.getElementById("confetti");
+
+const colors=[
+"#ff0000",
+"#00ff00",
+"#ffff00",
+"#00ffff",
+"#ff00ff",
+"#ffffff"
+];
+
+for(let i=0;i<80;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"%";
+c.style.background=colors[Math.floor(Math.random()*colors.length)];
+c.style.animationDuration=(4+Math.random()*5)+"s";
+c.style.animationDelay=Math.random()*5+"s";
+
+confetti.appendChild(c);
+}
+
+</script>
+
+</body>
+</html>
